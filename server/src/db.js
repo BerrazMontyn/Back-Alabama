@@ -28,10 +28,10 @@ let sequelize =
         },
         ssl: true,
       })
-    : new Sequelize(
-        `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/maryarte`,
-        { logging: false, native: false }
-      );
+    : new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/alabama`, {
+        logging: false,
+        native: false,
+      });
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -58,7 +58,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Model, routes } = sequelize.models;
+const { Cervezas, Carta } = sequelize.models;
 
 // Aca vendrian las relaciones
 
