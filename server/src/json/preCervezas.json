@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Blonde",
+        "img": "birra blonde",
+        "ibu": 2.5,
+        "abv": 4.5,
+        "cerveceria": "Bohr"
+    },
+    {
+        "name": "Scottish",
+        "img": "birra scottish",
+        "ibu": 5.0,
+        "abv": 6.5,
+        "cerveceria": "Bohr"
+    },
+    {
+        "name": "Honey",
+        "img": "birra honey",
+        "ibu": 2.0,
+        "abv": 1.8,
+        "cerveceria": "Bohr"
+    }, 
+    {
+        "name": "Sesion Ipa",
+        "img": "birra sesion ipa",
+        "ibu": 4.5,
+        "abv": 3.5,
+        "cerveceria": "Bohr"
+    }
+]

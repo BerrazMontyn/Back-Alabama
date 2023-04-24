@@ -1,11 +1,14 @@
-const server = require("./src/app");
-const { conn } = require("./src/db");
-require("dotenv").config();
+const server = require("./src/app.js");
+const express = require("express");
+const { conn } = require("./src/db.js");
+const morgan = require("morgan");
 
-const port = process.env.PORT;
-// Syncing all the models at once
-conn.sync({ force: false }).then(async () => {
-  server.listen(port, () => {
-    console.log(`servidor corriendo en puerto: ${port}`); // eslint-disable-line no-console
+const app = express();
+
+app.use(morgan("dev"));
+// Syncing all the models at once.
+conn.sync({ force: true }).then(() => {
+  server.listen(3001, () => {
+    console.log("%s listening at 3001"); // eslint-disable-line no-console
   });
 });
