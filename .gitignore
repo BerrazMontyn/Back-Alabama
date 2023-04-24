@@ -1,15 +1,15 @@
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp/
 .pnp.js
 /package-lock.json
 
 # testing
-/coverage
+coverage/
 
 # production
 /build
 /package-lock.json
 
 # misc
-.env
+.env/
