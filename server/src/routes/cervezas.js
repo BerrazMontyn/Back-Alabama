@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   // let { name } = req.query;
   try {
-    const data = await Cervezas.findAll({});
+    const data = await Cervezas.findAll();
     res.status(200).json(data);
   } catch (error) {
     res.status(400).json({ error: "No se encontró sub categoria" });
@@ -43,7 +43,7 @@ router.get("/", async (req, res) => {
 //------------------------------------------------------------------------
 // GET/cervezas/:id
 
-router.get("/id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     let { id } = req.params;
     if (id) {

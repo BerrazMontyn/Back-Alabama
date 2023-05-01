@@ -12,6 +12,7 @@ const cargaCerveza = require("../json/preCervezas.json");
 //         img: cerveza.img,
 //         ibu: cerveza.ibu,
 //         abv: cerveza.abv,
+//         description: cerveza.description
 //         cerveceria: cerveza.cerveceria,
 //       };
 //     });
@@ -30,13 +31,14 @@ const cargaCerveza = require("../json/preCervezas.json");
 
 const create_cerveza = async (data) => {
   try {
-    let { name, img, ibu, abv } = data;
+    let { name, img, ibu, abv, description } = data;
 
     let new_cerveza = await Cervezas.create({
       name,
       img,
       ibu,
       abv,
+      description,
     });
     return new_cerveza;
   } catch (error) {
