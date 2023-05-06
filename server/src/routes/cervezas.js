@@ -9,7 +9,7 @@ const { Cervezas } = require("../db");
 const router = Router();
 
 //-------------------------------------------------------------
-//POST CERVEAZAS
+//POST CERVEZAS
 
 router.post("/", async (req, res) => {
   try {
@@ -40,6 +40,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+//------------------------------------------------------------------------
+//GET PRECARGA
+router.get("/precarga", async (req, res) => {
+  try {
+    const cervezas = preload_cervezas();
+    res.json(cervezas);
+  } catch (error) {
+    console.log("ROMPO Y NO CARGO EN PRECARGA", error);
+  }
+});
 //------------------------------------------------------------------------
 // GET/cervezas/:id
 

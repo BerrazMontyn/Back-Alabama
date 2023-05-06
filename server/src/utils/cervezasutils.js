@@ -4,27 +4,27 @@ const cargaCerveza = require("../json/preCervezas.json");
 //------------------------------------------------
 //PreCARGA JSON
 
-// const preload_cervezas = async () => {
-//   try {
-//     let data = cargaCerveza.map((cerveza) => {
-//       return {
-//         name: cerveza.name,
-//         img: cerveza.img,
-//         ibu: cerveza.ibu,
-//         abv: cerveza.abv,
-//         description: cerveza.description
-//         cerveceria: cerveza.cerveceria,
-//       };
-//     });
+const preload_cervezas = async () => {
+  try {
+    let data = cargaCerveza.map((cerveza) => {
+      return {
+        name: cerveza.name,
+        img: cerveza.img,
+        ibu: cerveza.ibu,
+        abv: cerveza.abv,
+        description: cerveza.description,
+        cerveceria: cerveza.cerveceria,
+      };
+    });
 
-//     for (const cerveza of data) {
-//       create_cerveza(cerveza);
-//     }
-//     return data;
-//   } catch (error) {
-//     console.log("Rompo en la preCarga", error);
-//   }
-// };
+    for (const cerveza of data) {
+      create_cerveza(cerveza);
+    }
+    return data;
+  } catch (error) {
+    console.log("Rompo en la preCarga", error);
+  }
+};
 
 //------------------------------------------------
 //CREA PRODUCTO
@@ -56,6 +56,9 @@ const cerveza_load = async () => {
     console.log("Rompo en CERVEZA_LOAD ;)", error);
   }
 };
+
+//--------------------------------------------------------------
+// Modificar Cervezas.
 module.exports = {
   create_cerveza,
   cerveza_load,

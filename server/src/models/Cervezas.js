@@ -19,6 +19,7 @@ module.exports = (sequelize) => {
     },
     cerveceria: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     description: {
       type: DataTypes.TEXT,
